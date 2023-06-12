@@ -3,7 +3,6 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const colors = require("colors");
-const ejsMate = require("ejs-mate")
 const Movie = require("./models/Movie");
 const axios = require("axios");
 const port=3000
@@ -13,8 +12,7 @@ mongoose
   .then(() => console.log("connection open!"))
   .catch((err) => console.log(err));
 
-  
-app.engine("ejs", ejsMate);
+ 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
