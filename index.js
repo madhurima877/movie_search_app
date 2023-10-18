@@ -45,7 +45,7 @@ app.post("/",async (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-});
+} );
 
 
-app.listen(port, () => console.log(`Server listening at http://localhost:3000`.red)) 
+app.listen(port, () => console.log(`Server listening at http://localhost:3000`.red))
